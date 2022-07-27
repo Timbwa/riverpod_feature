@@ -1,0 +1,44 @@
+name: riverpod_feature
+description: A brick for generating a feature folder using Riverpod for DI and State Management
+
+# The following defines the version and build number for your brick.
+# A version number is three numbers separated by dots, like 1.2.34
+# followed by an optional build number (separated by a +).
+version: 0.1.0+1
+
+# The following defines the environment for the current brick.
+# It includes the version of mason that the brick requires.
+environment:
+  mason: ">=0.1.0-dev.26 <0.1.0"
+
+# Variables specify dynamic values that your brick depends on.
+# Zero or more variables can be specified for a given brick.
+# Each variable has:
+#  * a type (string, number, boolean, enum, or array)
+#  * an optional short description
+#  * an optional default value
+#  * an optional list of default values (array only)
+#  * an optional prompt phrase used when asking for the variable
+#  * a list of values (enums only)
+vars:
+  name:
+    type: string
+    description: The name of the feature
+    default: First Feature
+    prompt: What is the name of your feature?
+  separate_state:
+    type: boolean
+    default: false
+    description: Generate a Separate State file for your feature
+    prompt: Do you want to generate a separate State file
+  has_service:
+    type: boolean
+    default: true
+    description: A Service for the feature
+    prompt: Does the feature have a service?
+  user_name:
+    type: string
+    description: Your name used in TODOs
+    default: Developer
+    prompt: Finally, what is your name :) ?
+
